@@ -44,8 +44,9 @@ $tempunit = "'. $_POST["tempunit"]. '";
 $rainunit  = "'. $_POST["rainunit"]. '";
 $rainrate = "'. $_POST["rainrate"]. '";
 $pressureunit  = "'. $_POST["pressureunit"]. '";
-$livedataFormat = "'. $_POST["livedataFormat"]. '";
+$livedataFormat = "cumulus";
 $livedata   = "'. $_POST["livedata"]. '";
+$swversion  = "'. $_POST["swversion"]. '";  
 
 $currentconditions   = "'. $_POST["currentconditions"]. '";
 $boltekfile   = "'. $_POST["boltekfile"]. '";
@@ -453,17 +454,18 @@ check path to data file
 </svg>
 
 Cumulus Software Path to Data file</div><p>
-      <div class= "stationvalue">Data Type</div>
+      <div class= "stationvalue">Data Source</div>
       <svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="#F05E40" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
     <path d="M12 30 L24 16 12 2" />
 </svg><svg id="i-chevron-bottom" viewBox="0 0 32 32" width="10" height="10" fill="#777" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
     <path d="M30 12 L16 24 2 12" />
 </svg>
- <label name="livedataFormat"></label>
-        <select id="livedataFormat" name="livedataFormat" class="choose1">
-           <option ><?php echo $livedataFormat ;?></option>  
-            <option>cumulus</option>
-          
+ <label name="swversion"></label>
+        <select id="swversion" name="swversion" class="choose1">
+           <option ><?php echo $swversion ;?></option>  
+            <option>Cumulus</option>
+            <option>weeWX</option>
+	    <option>WeatherCat</option>
            
         </select>
             
@@ -557,6 +559,7 @@ Which Weather Station Hardware</div><p>
            <option>Oregon WMR-918</option>
            <option>Oregon WMR-968</option>  
            <option>Fine Offset WH1080</option>
+	   <option>Fine Offset WH2650</option>	
            <option>Ambient Offset WH1080</option>
            <option>Maplin WH1080</option> 
            <option>La Crosse</option> 
